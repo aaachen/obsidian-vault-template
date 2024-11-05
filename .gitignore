@@ -1,0 +1,22 @@
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspaces.json
+.obsidian.mobile/workspace-mobile.json
+
+# Sensitive data
+.obsidian/plugins/recent-files-obsidian/data.json
+.obsidian.mobile/plugins/recent-files-obsidian/data.json
+.obsidian.mobile/todoist-token
+.obsidian/todoist-token
+
+# Remove large media, use plugin to sync
+Utilities/Images
+Utilities/Kindle
+
+# Exclude "bad" names
+null*
+.trash/
+
+.DS_STORE
+
+**/.md

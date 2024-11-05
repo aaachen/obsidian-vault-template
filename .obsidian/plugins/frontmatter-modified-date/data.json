@@ -1,0 +1,15 @@
+{
+  "frontmatterProperty": "modified",
+  "momentFormat": "YYYY-MM-DD",
+  "excludedFolders": [
+    "Utilities",
+    "Calendar/Notes",
+    "Atlas/Special"
+  ],
+  "useKeyupEvents": false,
+  "onlyUpdateExisting": false,
+  "timeout": 10,
+  "excludeField": "exclude_modified_update",
+  "appendField": "append_modified_update",
+  "appendMaximumFrequency": "day"
+}

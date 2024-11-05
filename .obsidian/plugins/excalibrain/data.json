@@ -1,0 +1,254 @@
+{
+  "compactView": false,
+  "compactingFactor": 1.5,
+  "minLinkLength": 18,
+  "excalibrainFilepath": "Atlas/Special/Excalibrain/excalibrain.md",
+  "indexUpdateInterval": 10000,
+  "hierarchy": {
+    "parents": [
+      "author",
+      "Parents",
+      "type",
+      "up",
+      "URL"
+    ],
+    "children": [
+      "Children",
+      "influenced"
+    ],
+    "friends": [
+      "artifact",
+      "Friend",
+      "Friends",
+      "influences",
+      "j",
+      "Jump",
+      "Jumps",
+      "people",
+      "relevant",
+      "URL",
+      "X"
+    ],
+    "exclusions": [
+      "excalidraw-border-color",
+      "excalidraw-css",
+      "excalidraw-default-mode",
+      "excalidraw-export-dark",
+      "excalidraw-export-pngscale",
+      "excalidraw-export-svgpadding",
+      "excalidraw-export-transparent",
+      "excalidraw-font",
+      "excalidraw-font-color",
+      "excalidraw-link-brackets",
+      "excalidraw-link-prefix",
+      "excalidraw-linkbutton-opacity",
+      "excalidraw-onload-script",
+      "excalidraw-plugin",
+      "excalidraw-url-prefix",
+      "kanban-plugin"
+    ],
+    "leftFriends": [
+      "Coined by",
+      "Related"
+    ],
+    "rightFriends": [
+      "See also"
+    ],
+    "previous": [],
+    "next": [],
+    "hidden": [
+      ""
+    ]
+  },
+  "inferAllLinksAsFriends": false,
+  "inverseInfer": false,
+  "inverseArrowDirection": true,
+  "renderAlias": false,
+  "nodeTitleScript": "",
+  "backgroundColor": "#2d3039ff",
+  "excludeFilepaths": [],
+  "autoOpenCentralDocument": true,
+  "toggleEmbedTogglesAutoOpen": true,
+  "showInferredNodes": false,
+  "showAttachments": true,
+  "showURLNodes": false,
+  "showVirtualNodes": true,
+  "showFolderNodes": false,
+  "showTagNodes": false,
+  "showPageNodes": true,
+  "showNeighborCount": true,
+  "showFullTagName": false,
+  "maxItemCount": 30,
+  "renderSiblings": true,
+  "applyPowerFilter": false,
+  "baseNodeStyle": {
+    "prefix": "",
+    "backgroundColor": "#00000066",
+    "fillStyle": "solid",
+    "textColor": "#5dbcd2ff",
+    "borderColor": "#b5b5b54c",
+    "fontSize": 20,
+    "fontFamily": 2,
+    "maxLabelLength": 30,
+    "roughness": 0,
+    "strokeShaprness": "round",
+    "strokeWidth": 1,
+    "strokeStyle": "solid",
+    "padding": 10,
+    "gateRadius": 3,
+    "gateOffset": 15,
+    "gateStrokeColor": "#ffffffff",
+    "gateBackgroundColor": "#ffffffff",
+    "gateFillStyle": "solid"
+  },
+  "centralNodeStyle": {
+    "fontSize": 30,
+    "backgroundColor": "#c7c400ff",
+    "textColor": "#000000ff"
+  },
+  "inferredNodeStyle": {
+    "backgroundColor": "#000005b3",
+    "textColor": "#d669bcff"
+  },
+  "urlNodeStyle": {
+    "prefix": "🌐 "
+  },
+  "virtualNodeStyle": {
+    "backgroundColor": "#ff000066",
+    "fillStyle": "hachure",
+    "textColor": "#ffffffff"
+  },
+  "siblingNodeStyle": {
+    "fontSize": 15,
+    "textColor": "#67c073ff"
+  },
+  "attachmentNodeStyle": {
+    "prefix": "📎 ",
+    "textColor": "#cf6f6fff"
+  },
+  "folderNodeStyle": {
+    "prefix": "📂 ",
+    "strokeShaprness": "sharp",
+    "borderColor": "#ffd700ff",
+    "textColor": "#ffd700ff"
+  },
+  "tagNodeStyle": {
+    "prefix": "#",
+    "strokeShaprness": "sharp",
+    "borderColor": "#4682b400",
+    "textColor": "#67c073ff"
+  },
+  "tagNodeStyles": {
+    "": {}
+  },
+  "tagStyleList": [
+    ""
+  ],
+  "primaryTagField": "Note type",
+  "primaryTagFieldLowerCase": "note-type",
+  "displayAllStylePrefixes": true,
+  "baseLinkStyle": {
+    "strokeColor": "#696969FF",
+    "strokeWidth": 1,
+    "strokeStyle": "solid",
+    "roughness": 1,
+    "startArrowHead": "none",
+    "endArrowHead": "none",
+    "showLabel": false,
+    "fontSize": 9,
+    "fontFamily": 3,
+    "textColor": "#ffffffff"
+  },
+  "inferredLinkStyle": {},
+  "folderLinkStyle": {
+    "strokeColor": "#ffd700ff"
+  },
+  "tagLinkStyle": {
+    "strokeColor": "#4682b4ff"
+  },
+  "hierarchyLinkStyles": {
+    "influenced": {},
+    "": {},
+    "URL": {},
+    "author": {},
+    "Parents": {},
+    "up": {},
+    "Children": {},
+    "type": {},
+    "Coined by": {},
+    "Related": {},
+    "See also": {}
+  },
+  "navigationHistory": [
+    "Special/PDFs/Emergent Task Planner.pdf",
+    "Special/PDFs/Sensemaking Workshop Keynote w Mike Schmitz.pdf",
+    "Special/PDFs/Swedberg 2020 ‘How Do I Know What I Think Till I See What I Say’ an Aphorism and Its Implications for Creative Theorizing.pdf",
+    "Special/PDFs/Idea Emergence.pdf",
+    "Endeavors/LYT/Efforts/Workshop/W11/Workshop 11 Showcases - Raw Notes.md",
+    "Special/PDFs/What is Your PKM Process.pdf",
+    "Calendar/2023/2023-06-28.md",
+    "Atlas/People/Network/Karen Hume.md",
+    "Atlas/Maps/Thinking MOC.md",
+    "Atlas/Ideas/BOAT notes.md",
+    "Atlas/Ideas/Evergreen notes.md",
+    "Atlas/Ideas/Habits carry a ton of hidden inertia.md",
+    "Calendar/2015-02-20 Habit Concepts and Theory.md",
+    "Atlas/Ideas/On the process of note-making.md",
+    "Atlas/Ideas/Commonplace Book.md",
+    "Prominent People (kit).md",
+    "Atlas/Utilities/Templates/Template, Properties, Base.md",
+    "Atlas/Utilities/Templates/Template, Properties, Daily Note (kit).md",
+    "Atlas/Utilities/Templates/Template, Properties, Base + Tags.md",
+    "Atlas/Utilities/Templates/Template, Properties, Dates Dates Dates (Kit).md",
+    "Atlas/Sources/1844 - The Count of Monte Cristo (book).md",
+    "Atlas/Sources/2018 - Atomic Habits (book).md",
+    "Atlas/Sources/The Count of Monte Cristo (book).md",
+    "Atlas/Maps/Sources MOC.md",
+    "Ideaverse Kit.md",
+    "Atlas/Maps/Notebox.md",
+    "Atlas/Maps/Inbox.md",
+    "Atlas/Maps/Outbox.md",
+    "Atlas/Maps/Add.md",
+    "Atlas/Maps/Communicate.md",
+    "Atlas/Maps/Thinking Map.md",
+    "Atlas/Notes/Cards/Judgement.md",
+    "Atlas/Special/Excalidraw/ExcaliBrain Snapshot - Judgement.excalidraw.md",
+    "Home.md",
+    "Efforts/On/🧠 Shaping Second Brain.md",
+    "Atlas/Special/Excalidraw/ExcaliBrain Snapshot - 🧠 Shaping Second Brain.excalidraw.md",
+    "Atlas/Special/Excalidraw/ExcaliBrain Snapshot - ExcaliBrain Snapshot - 🧠 Shaping Second Brain.excalidraw.excalidraw.md",
+    "Atlas/Maps/My Second Brain.md",
+    "Atlas/Maps/Second Brain Best Practices.md",
+    "Atlas/Notes/Tech/Leetcode/LC 212. Word Search II.md",
+    "+ Encounters/Performance metrics (machine learning).md",
+    "+ Encounters/Debugging a learning algorithm.md",
+    "+ Encounters/Model selection.md",
+    "Atlas/Special/Excalidraw/ExcaliBrain Snapshot - Machine Learning Development Process.excalidraw.md",
+    "Atlas/Notes/Tech/Machine learning model deployment.md",
+    "Utilities/Sidelanes/View Tasks.md",
+    "Atlas/Notes/Tech/Lookaround.md",
+    "Atlas/Sources/Book/1984.md",
+    "Atlas/Notes/Tech/Machine Learning Development Process.md",
+    "Atlas/+ Maps/Index/Machine Learning.md"
+  ],
+  "allowOntologySuggester": true,
+  "ontologySuggesterParentTrigger": "::p",
+  "ontologySuggesterChildTrigger": "::c",
+  "ontologySuggesterLeftFriendTrigger": "::l",
+  "ontologySuggesterRightFriendTrigger": "::r",
+  "ontologySuggesterPreviousTrigger": "::e",
+  "ontologySuggesterNextTrigger": "::n",
+  "ontologySuggesterTrigger": ":::",
+  "ontologySuggesterMidSentenceTrigger": "(",
+  "boldFields": false,
+  "allowAutozoom": true,
+  "maxZoom": 1,
+  "allowAutofocuOnSearch": true,
+  "defaultAlwaysOnTop": false,
+  "embedCentralNode": false,
+  "centerEmbedWidth": 550,
+  "centerEmbedHeight": 700,
+  "ontologySuggesterFriendTrigger": "::f",
+  "hierarchyLinkStyle": {},
+  "hierarchyStyleList": []
+}

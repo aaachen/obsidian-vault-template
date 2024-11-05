@@ -1,0 +1,65 @@
+/* Banner */
+
+/*issue: https://github.com/noatpad/obsidian-banners/issues/155 */
+
+.obsidian-banner-wrapper {
+    margin-top: 0px; !important
+}
+
+.markdown-preview-view:has(.obsidian-banner-wrapper) {
+    padding-top: calc(var(--banner-height) + var(--file-margins));
+}
+
+/* 
+* somehow those variables don't work in mobile so hardcoding 
+* file-margins = 120 px
+* banner-height = 25px 
+*/
+.is-mobile .markdown-preview-view:has(.obsidian-banner-wrapper) {
+    padding-top: 145px !important;
+}
+
+
+.is-mobile .home-btn > button {
+   font-size: 13px;
+}
+
+.hide-embedded-header .markdown-embed h1{
+	display: none; 
+}
+
+.hide-embedded-header .markdown-embed h2{
+	display: none; 
+}
+
+/* ignore properties if cssclass */
+[data-mode="preview"] .hide-properties-metadata-container .metadata-container div {
+    display: none;
+}
+
+[data-mode="preview"] .hide-title .mod-header div {
+    display: none;
+}
+
+
+/*https://github.com/nickmilo/aligned-callout-header-titles/blob/main/README.md*/
+body:not(.pt-disable-callout-styling) .callout .callout-title {
+  align-items: center;
+}
+
+/* Center everything */
+.center-table table {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ability to set white background for transparent images */
+/* https://forum.obsidian.md/t/how-to-set-a-white-background-partially-for-a-diagram-in-a-note/58497/6 */
+.image-embed.is-loaded img[alt*="white"] {
+    background-color: white;
+}
+
+/* for url embedded image I think */
+img[alt*="white-bg"] {
+    background-color: white;
+}

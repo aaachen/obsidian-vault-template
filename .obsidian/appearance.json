@@ -1,0 +1,21 @@
+{
+  "cssTheme": "Minimal",
+  "translucency": false,
+  "baseFontSize": 22,
+  "enabledCssSnippets": [
+    "MCL Wide Views",
+    "MCL Multi Column",
+    "MCL Gallery Cards",
+    "andrew-minimal-them-setup",
+    "andrew-minimal-theme-setup",
+    "nick-milo-callout-colors",
+    "nick-milo-callout-prism-theme"
+  ],
+  "textFontFamily": "",
+  "interfaceFontFamily": "",
+  "theme": "obsidian",
+  "accentColor": "",
+  "showViewHeader": true,
+  "nativeMenus": true,
+  "monospaceFontFamily": ""
+}

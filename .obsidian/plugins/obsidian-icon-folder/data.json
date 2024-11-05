@@ -1,0 +1,53 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "🧭",
+      "📅",
+      "💪",
+      "🔧",
+      "💠",
+      "🇺🇸",
+      "🗾",
+      "🌎",
+      "🦾",
+      "❔",
+      "🧠",
+      "🗣",
+      "🧑",
+      "📂",
+      "🔮"
+    ],
+    "recentlyUsedIconsSize": 15,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInFrontmatterEnabled": false,
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconIdentifier": "",
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsInLinksEnabled": true,
+    "debugMode": false,
+    "iconInTitlePosition": "above",
+    "lucideIconPackType": "native"
+  },
+  "Calendar": "📅",
+  "Atlas": "🧭",
+  "Efforts": "💪",
+  "Utilities": "🔧",
+  "Atlas/Notes/Claims": "🗣",
+  "Atlas/Notes/Questions": "❔",
+  "Atlas/Notes/Personal": "💠"
+}

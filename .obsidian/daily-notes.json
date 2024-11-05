@@ -1,0 +1,5 @@
+{
+  "folder": "Calendar",
+  "template": "Atlas/Utilities/Templates/Template, Properties, Daily Note",
+  "autorun": false
+}

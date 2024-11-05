@@ -1,0 +1,33 @@
+{
+  "showGettingStartedBanner": false,
+  "hasMigratedDailyNoteSettings": true,
+  "hasMigratedWeeklyNoteSettings": true,
+  "daily": {
+    "folder": "Calendar/Notes/This Year",
+    "template": "Utilities/Templates/Template, Properties, Daily Recap.md",
+    "enabled": true,
+    "format": "yyyy-MM-DD - ddd MMM D"
+  },
+  "weekly": {
+    "format": "YYYY-MM-[w]ww",
+    "folder": "Calendar/Notes/This Year",
+    "template": "Utilities/Templates/Template, Properties, Weekly Recap.md",
+    "enabled": true
+  },
+  "monthly": {
+    "format": "",
+    "template": "Utilities/Templates/Template, Properties, Monthly Recap.md",
+    "folder": "Calendar/Notes/This Year",
+    "enabled": true
+  },
+  "quarterly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "yearly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  }
+}

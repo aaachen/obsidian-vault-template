@@ -1,0 +1,10 @@
+{
+  "files": [
+    {
+      "useMoment": false,
+      "file": "Home.md"
+    }
+  ],
+  "useExistingPane": true,
+  "useHoverEditor": false
+}
