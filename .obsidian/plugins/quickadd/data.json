@@ -13,13 +13,6 @@
           "command": false,
           "choices": [
             {
-              "id": "11f74a30-0c40-454d-a37a-202c9f25ac87",
-              "name": "log daily metrics",
-              "type": "Macro",
-              "command": true,
-              "macroId": "8edd5e7d-9098-436a-ae4f-503ed665e324"
-            },
-            {
               "id": "7df8090a-7b03-4a73-b29b-bb2972ecbc9c",
               "name": "append time stamp",
               "type": "Capture",
@@ -333,49 +326,7 @@
           "macroId": "856998ab-624a-4913-975e-80ebe7a820a0"
         }
       ],
-      "collapsed": false
-    },
-    {
-      "id": "e5fe42db-684b-42ce-8068-3e140f2a051d",
-      "name": "zettelize source",
-      "type": "Macro",
-      "command": false,
-      "macroId": "7f9b6bc2-eba2-49e0-afaf-1b9d015fd5bc"
-    },
-    {
-      "id": "71f7a93d-6a36-49c5-92fb-d7b42822628b",
-      "name": "leetcode table",
-      "type": "Capture",
-      "command": true,
-      "appendLink": false,
-      "captureTo": "",
-      "captureToActiveFile": true,
-      "createFileIfItDoesntExist": {
-        "enabled": false,
-        "createWithTemplate": false,
-        "template": ""
-      },
-      "format": {
-        "enabled": true,
-        "format": "| [{{VALUE:LeetCodeName}}]({{value:URL}})        | [[#{{VALUE:LeetCodeName}}\\|link]]     |                | Medium              |                   |                |      |\n\n## {{VALUE:LeetCodeName}}"
-      },
-      "insertAfter": {
-        "enabled": true,
-        "after": "## Table",
-        "insertAtEnd": true,
-        "considerSubsections": false,
-        "createIfNotFound": false,
-        "createIfNotFoundLocation": "top"
-      },
-      "prepend": false,
-      "task": false,
-      "openFileInNewTab": {
-        "enabled": false,
-        "direction": "vertical",
-        "focus": true
-      },
-      "openFile": false,
-      "openFileInMode": "default"
+      "collapsed": true
     }
   ],
   "macros": [
@@ -482,20 +433,6 @@
       "runOnStartup": false
     },
     {
-      "name": "log daily metrics",
-      "id": "8edd5e7d-9098-436a-ae4f-503ed665e324",
-      "commands": [
-        {
-          "name": "log_daily_metrics",
-          "type": "UserScript",
-          "id": "149316c6-9dcc-48d5-9501-7872d9037686",
-          "path": "Utilities/Scripts/QuickAdd/log_daily_metrics.js",
-          "settings": {}
-        }
-      ],
-      "runOnStartup": false
-    },
-    {
       "name": "log daily effort",
       "id": "f3fb6d9a-e3a4-4c44-a1a4-2441686767d6",
       "commands": [
@@ -557,20 +494,6 @@
           "name": "zettelize_source",
           "type": "UserScript",
           "id": "1957218e-dead-4346-a3ad-af847d2f5f95",
-          "path": "Utilities/Scripts/QuickAdd/zettelize_source.js",
-          "settings": {}
-        }
-      ],
-      "runOnStartup": false
-    },
-    {
-      "name": "zettelize source",
-      "id": "7f9b6bc2-eba2-49e0-afaf-1b9d015fd5bc",
-      "commands": [
-        {
-          "name": "zettelize_source",
-          "type": "UserScript",
-          "id": "579a610f-e0db-4449-a632-093d3dd71976",
           "path": "Utilities/Scripts/QuickAdd/zettelize_source.js",
           "settings": {}
         }
