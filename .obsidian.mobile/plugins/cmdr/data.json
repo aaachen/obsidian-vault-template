@@ -1,0 +1,97 @@
+{
+  "confirmDeletion": false,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [
+    {
+      "id": "workspace:toggle-stacked-tabs",
+      "icon": "lucide-layers",
+      "name": "Toggle stacked tabs",
+      "mode": "any"
+    }
+  ],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "quickadd:choice:cea4d3e9-8084-478d-ba88-3ccea0c66fc4",
+      "icon": "file-plus",
+      "name": "QuickAdd: 🗒️New Note",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [
+    {
+      "id": "obsidian-hotkeys-for-specific-files:Home.md-new-tab",
+      "icon": "home",
+      "name": "Hotkeys for specific files: Open Home in new tab",
+      "mode": "any"
+    },
+    {
+      "id": "periodic-notes:open-daily-note",
+      "icon": "calendar",
+      "name": "Periodic Notes: Open daily note",
+      "mode": "any"
+    },
+    {
+      "id": "workspace:close",
+      "icon": "lucide-x",
+      "name": "Close current tab",
+      "mode": "any"
+    }
+  ],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": [
+      "Obsidian42 - Text Transporter",
+      "File Info Panel",
+      "Omnisearch",
+      "Create new book note",
+      "Toggle stacked tabs",
+      "Show a random prompt",
+      "Open Symbols for the active editor",
+      "Show Slide Preview",
+      "Open Markdown Table Editor",
+      "Open LexTest",
+      "Open ChatGPT--",
+      "Publish changes",
+      "Dangerzone Writing",
+      "Toggle Privacy Glasses",
+      "Hide all",
+      "Reveal non-private",
+      "Reveal all",
+      "New Excalidraw drawing",
+      "3D Graph",
+      "Open today's daily note",
+      "Publish changes...",
+      "Open today's daily note",
+      "Create new drawing",
+      "Find Journey",
+      "Open projects",
+      "Open in Headings Mode",
+      "Manage workspace layouts",
+      "BRAT",
+      "QuickAdd: create conversation"
+    ]
+  },
+  "spacing": "7",
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [
+      {
+        "commandID": "quickadd:choice:7df8090a-7b03-4a73-b29b-bb2972ecbc9c",
+        "iconID": "timer"
+      }
+    ],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

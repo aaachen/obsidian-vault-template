@@ -7,64 +7,45 @@ cssclasses:
   - hide-title
 banner_x: 0.46038
 obsidianUIMode: preview
-modified: 2024-11-05
+modified: 2025-03-14
 ---
-`BUTTON[week-menu]` 🌱 `BUTTON[yearly-dashboard]` 
+<span class="center-menu">`BUTTON[week-menu]` 🌱 `BUTTON[year]` </span>
 
-> [!SUN]- ### Goals & Habit
+> [!SUN]- Habit
 >
 >> [!multi-column]
 >>
 >>> ```dataviewjs
->>> await dv.view("Utilities/Scripts/Dataview/home-goal", {context: this})
+>>> await dv.view("Utilities/Scripts/Dataview/home/home-habits-digest", {context: this})
 >>> ```
+>>> %%
+>>> [[🫒 Sleep & Diet#TODOs]] 
+>>> %%
 >>
 >>> ```dataviewjs
->>> await dv.view("Utilities/Scripts/Dataview/home-habits", {context: this})
+>>> await dv.view("Utilities/Scripts/Dataview/home/home-habits", {context: this})
 >>> ```
 
 > [!Multi-column] 
 > 
-> > [!Map]+ ### Atlas
-> > > *Where would you like to go?*
-> > 
-> > **Knowledge**
-> > - [[Library ⚖️]] | [[Sources Map]]
-> >   
-> > **Inspired Work**
-> > - [[Writing Inbox]]
-> > 
-> > **Personal**
-> > - [[Life Map 🗺️]] | [[Cabin 🪵]] | [[People Map]] | [[Places Map]]
-> > - [[🌼 My Health]] | [[💰 My Finance]]
+> > [!Map]+ Atlas
+> > - [[Writing Inbox|📥 Inbox]]
+> > - [[Literature Map|📚 Literature]]
 >
-> > [!Calendar]+ ### Calendar
-> > > *What's on your mind?*
-> >
-> > **Recent**
-> > -  `=link(dateformat(date(today), "yyyy-MM-wWW"), "🐛 This week")` | `=link(dateformat(date(today), "yyyy-MM"), "🦋 This month")` 
-> > 
-> > **Logs**
-> > -  [[Themed Logs]]
-> > 
-> > **Personal Journals**
-> > - [[Journal Log]] | [[me]]/[[Myself 🧘🏽‍♂️]] | [[Epochs of My Life]]
-> > 
-> > **General**
-> > -  [[My Yearbooks]] | [[Calendar]]
-> >
+> > [!Calendar]+ Calendar
+> > - `=link("Journal Log", "📕Journal")`
+> > -  `=link(dateformat(date(today), "yyyy-MM-wWW"), "🐛 Week")` | `=link(dateformat(date(today), "yyyy-MM"), "🦋 Month")`
+> > - [[Yearbooks|🎇 Yearbooks]] | [[Occasions|🏞️ Occasions]]
 > 
-> > [!Training]+ ### Effort
-> > > *Where do you like to work on?*
-> > 
-> > [[💪 Efforts]] - concentrated view of all efforts
+> > [!Training]+ Effort
+> > - [[💪 Efforts]] 
 > >  
 > > #### 🔥 On
 >>```dataviewjs
->> await dv.view("Utilities/Scripts/Dataview/effort-dashboard", { context: this , level: "On 🔥"})
+>> await dv.view("Utilities/Scripts/Dataview/effort/effort-dashboard", { context: this , level: "On 🔥"})
 >>```
 >>
 >>#### ♻️ Ongoing
 >>```dataviewjs
->> await dv.view("Utilities/Scripts/Dataview/effort-dashboard", { context: this , level: "Ongoing ♻️"})
+>> await dv.view("Utilities/Scripts/Dataview/effort/effort-dashboard", { context: this , level: "Ongoing ♻️"})
 >>```

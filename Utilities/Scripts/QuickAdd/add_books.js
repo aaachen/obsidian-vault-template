@@ -54,22 +54,20 @@ async function start(params, settings) {
 	const ISBN = getISBN(selectedBook);
 
     const authors = selectedBook.authors.length == 1 ? `"[[${selectedBook.authors[0]}]]"` : linkifyList(selectedBook.authors);
+	console.log("authors", authors)
+	console.log("genre", linkifyList(selectedBook.categories))
 
 	QuickAdd.variables = {
 		...selectedBook,
 		fileName: replaceIllegalFileNameCharactersInString(selectedBook.title),
 		authors: authors,
-		isbn: `${ISBN.ISBN10 ? ISBN.ISBN10 : ""}`,
-		// An URL to the GoodReads page of the book using its ISBN. 
-		// May fail if ISBN returned by Google Books is not in Goodreads database.
 		goodreadsURL: `${ISBN.ISBN13 ? GOODREADS_URL + ISBN.ISBN13 : (ISBN.ISBN10 ? GOODREADS_URL + ISBN.ISBN10 : " ")}`,
 		cover: `${selectedBook.imageLinks ? selectedBook.imageLinks.thumbnail: " "}`.replace("http:", "https:"),
-        pageCount: selectedBook.pageCount,
+        pageCount: Number(selectedBook.pageCount),
         genreLinks: linkifyList(selectedBook.categories),
-        avgRating: selectedBook.averageRating,
         description: selectedBook.description,
 		// Publication date
-		datePublished: `${selectedBook.publishedDate ? (new Date((selectedBook.publishedDate))).getFullYear() : " "}`,
+		published: `${selectedBook.publishedDate ? (new Date((selectedBook.publishedDate))).toISOString().split('T')[0] : " "}`,
 	};
 }
 

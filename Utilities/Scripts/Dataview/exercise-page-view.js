@@ -1,10 +1,9 @@
 const { Common } = await cJS();
-
 /**
+ * TODO: REWORK THIS (PULLING FROM CSV)
  * Render graph in exercise view
  * - Best Set
  */
-
 const template = {
   label: "Default",
   backgroundColor: "rgba(255, 211, 101, 0.2)",

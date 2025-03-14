@@ -1,0 +1,26 @@
+{
+  "promptDelete": false,
+  "mobileToolbarCommands": [
+    "editor:indent-list",
+    "editor:unindent-list",
+    "quickadd:choice:7df8090a-7b03-4a73-b29b-bb2972ecbc9c",
+    "editor:undo",
+    "editor:redo",
+    "editor:toggle-checklist-status",
+    "editor:toggle-bold",
+    "editor:toggle-italics",
+    "editor:insert-callout",
+    "editor:attach-file",
+    "editor:insert-table",
+    "editor:toggle-code"
+  ],
+  "attachmentFolderPath": "Utilities/Images",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "Atlas/Notes",
+  "mobileQuickRibbonItem": "cmdr:QuickAdd: 🗒️New Note",
+  "mobilePullAction": "command-palette:open",
+  "alwaysUpdateLinks": true,
+  "livePreview": true,
+  "strictLineBreaks": false,
+  "defaultViewMode": "source"
+}

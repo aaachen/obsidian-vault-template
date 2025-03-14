@@ -20,13 +20,6 @@
               "macroId": "8edd5e7d-9098-436a-ae4f-503ed665e324"
             },
             {
-              "id": "7acc5721-6c95-4a2c-ba2f-94ae1270e23f",
-              "name": "log exercise",
-              "type": "Macro",
-              "command": true,
-              "macroId": "7f10e015-fd96-4e71-969b-21b24f2edb85"
-            },
-            {
               "id": "7df8090a-7b03-4a73-b29b-bb2972ecbc9c",
               "name": "append time stamp",
               "type": "Capture",
@@ -111,13 +104,6 @@
               "type": "Macro",
               "command": true,
               "macroId": "0befc0d3-4988-471f-8b20-da383b4442f6"
-            },
-            {
-              "id": "030600ca-3f20-491b-8a7c-0fc455f063b7",
-              "name": "append log metadata",
-              "type": "Macro",
-              "command": true,
-              "macroId": "e853a7f2-10ed-44ff-a5f2-3defd2c71cb5"
             }
           ],
           "collapsed": true
@@ -131,20 +117,6 @@
       "type": "Multi",
       "command": false,
       "choices": [
-        {
-          "id": "7290bedf-6711-4b85-8ec0-ecdaae9c12b1",
-          "name": "log time spent",
-          "type": "Macro",
-          "command": true,
-          "macroId": "f3fb6d9a-e3a4-4c44-a1a4-2441686767d6"
-        },
-        {
-          "id": "64fb3024-8a80-4b89-9a61-c58bf691d111",
-          "name": "log weekly effort",
-          "type": "Macro",
-          "command": true,
-          "macroId": "6df45cc2-05fa-4ad0-b02f-3a3e8f2ad822"
-        },
         {
           "id": "a0200edd-b308-4baa-b9d3-3e50eca7db43",
           "name": "create milestone",
@@ -170,7 +142,7 @@
       "choices": [
         {
           "id": "a5051922-e590-4f7c-8e6a-34b76ae8bd68",
-          "name": "📥 Ideas",
+          "name": "📥 Notes",
           "type": "Template",
           "command": false,
           "templatePath": "Utilities/Templates/Template, Properties, Base.md",
@@ -181,9 +153,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "Atlas/Notes",
-              "Atlas/Notes/Claims",
-              "Atlas/Notes/Questions"
+              "Atlas/Notes"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
@@ -201,11 +171,41 @@
           "setFileExistsBehavior": false
         },
         {
-          "id": "3ffe7bf1-17fa-4cfa-8961-33b56c957d18",
-          "name": "🗺️ Map",
+          "id": "5a108093-3c5c-4ede-842f-54bc704804ec",
+          "name": "🗓️ Excerpt",
           "type": "Template",
           "command": false,
-          "templatePath": "Utilities/Templates/Template, Properties, Map.md",
+          "templatePath": "Utilities/Templates/Template, Properties, Base.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{DATE:}} -"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "Calendar/Notes/This Year"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": true
+        },
+        {
+          "id": "fb75e05d-40ce-4d1b-91a4-ad4fe9331efc",
+          "name": "🪧 Effort",
+          "type": "Template",
+          "command": false,
+          "templatePath": "Utilities/Templates/Template, Properties, Effort.md",
           "fileNameFormat": {
             "enabled": true,
             "format": "{{name}}"
@@ -213,7 +213,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "Atlas/+ Maps"
+              "Efforts/Areas"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
@@ -229,119 +229,13 @@
           "openFileInMode": "default",
           "fileExistsMode": "Increment the file name",
           "setFileExistsBehavior": false
-        },
-        {
-          "id": "f7ef3607-9f90-4b9c-adb4-0708c836b98b",
-          "name": "🔖 Resources",
-          "type": "Template",
-          "command": false,
-          "templatePath": "Utilities/Templates/Template, Properties, Bare.md",
-          "fileNameFormat": {
-            "enabled": true,
-            "format": "{{name}}"
-          },
-          "folder": {
-            "enabled": true,
-            "folders": [
-              "Atlas/Resources"
-            ],
-            "chooseWhenCreatingNote": false,
-            "createInSameFolderAsActiveFile": false,
-            "chooseFromSubfolders": false
-          },
-          "appendLink": false,
-          "openFileInNewTab": {
-            "enabled": false,
-            "direction": "vertical",
-            "focus": true
-          },
-          "openFile": true,
-          "openFileInMode": "default",
-          "fileExistsMode": "Increment the file name",
-          "setFileExistsBehavior": false
-        },
-        {
-          "id": "9865d40a-8419-4011-949a-9e58ebd432f6",
-          "name": "💪 Effort",
-          "type": "Multi",
-          "command": false,
-          "choices": [
-            {
-              "id": "1552505e-f576-4918-907e-b82340a7a85b",
-              "name": "💪 Vanilla Effort",
-              "type": "Template",
-              "command": false,
-              "templatePath": "Utilities/Templates/Template, Properties, Effort.md",
-              "fileNameFormat": {
-                "enabled": true,
-                "format": "{{name}}"
-              },
-              "folder": {
-                "enabled": true,
-                "folders": [
-                  "Efforts/Areas"
-                ],
-                "chooseWhenCreatingNote": false,
-                "createInSameFolderAsActiveFile": false,
-                "chooseFromSubfolders": false
-              },
-              "appendLink": false,
-              "openFileInNewTab": {
-                "enabled": false,
-                "direction": "vertical",
-                "focus": true
-              },
-              "openFile": true,
-              "openFileInMode": "default",
-              "fileExistsMode": "Increment the file name",
-              "setFileExistsBehavior": false
-            },
-            {
-              "id": "fb75e05d-40ce-4d1b-91a4-ad4fe9331efc",
-              "name": "🪧 Milestone Effort",
-              "type": "Template",
-              "command": false,
-              "templatePath": "Utilities/Templates/Template, Properties, Effort (Target + Milestone).md",
-              "fileNameFormat": {
-                "enabled": true,
-                "format": "{{name}}"
-              },
-              "folder": {
-                "enabled": true,
-                "folders": [
-                  "Efforts/Areas"
-                ],
-                "chooseWhenCreatingNote": false,
-                "createInSameFolderAsActiveFile": false,
-                "chooseFromSubfolders": false
-              },
-              "appendLink": false,
-              "openFileInNewTab": {
-                "enabled": false,
-                "direction": "vertical",
-                "focus": true
-              },
-              "openFile": true,
-              "openFileInMode": "default",
-              "fileExistsMode": "Increment the file name",
-              "setFileExistsBehavior": false
-            },
-            {
-              "id": "b4f5012a-068d-45f2-9b07-4fd0d8efb21d",
-              "name": "📝 Note",
-              "type": "Macro",
-              "command": false,
-              "macroId": "b7d5f103-2b0f-4aac-a0b1-c57f94e82ef2"
-            }
-          ],
-          "collapsed": true
         },
         {
           "id": "4e755f5d-bd16-4e6f-9275-dbdc858545a3",
           "name": "✅ Kanban",
           "type": "Template",
           "command": false,
-          "templatePath": "Utilities/Templates/Kanban Template.md",
+          "templatePath": "Utilities/Templates/Template, Kanban.md",
           "fileNameFormat": {
             "enabled": true,
             "format": "{{name}}"
@@ -349,8 +243,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "Utilities/Kanban",
-              ""
+              "Atlas/Special/Kanban"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
@@ -434,7 +327,7 @@
         },
         {
           "id": "296ac77f-5bbf-4858-86dc-b7647bed08d3",
-          "name": "🎞️ Movies",
+          "name": "🎞️ Movies & Games",
           "type": "Macro",
           "command": false,
           "macroId": "856998ab-624a-4913-975e-80ebe7a820a0"
@@ -516,7 +409,7 @@
             "folder": {
               "enabled": true,
               "folders": [
-                "Atlas/Notes/Sources/Book"
+                "Atlas/Literature/Annotated"
               ],
               "chooseWhenCreatingNote": false,
               "createInSameFolderAsActiveFile": false,
@@ -528,7 +421,7 @@
               "direction": "vertical",
               "focus": true
             },
-            "openFile": false,
+            "openFile": true,
             "openFileInMode": "default",
             "fileExistsMode": "Increment the file name",
             "setFileExistsBehavior": false
@@ -542,10 +435,10 @@
       "id": "856998ab-624a-4913-975e-80ebe7a820a0",
       "commands": [
         {
-          "name": "omdb",
+          "name": "add_movie",
           "type": "UserScript",
-          "id": "d64695e8-47e2-4e68-ab40-0086ccf3b84b",
-          "path": "Utilities/Scripts/QuickAdd/omdb.js",
+          "id": "910e8bfb-0269-45a5-981e-edd3ea7acafc",
+          "path": "Utilities/Scripts/QuickAdd/add_movie.js",
           "settings": {
             "OMDb API Key": ""
           }
@@ -559,7 +452,7 @@
             "name": "add movie from omdb data ",
             "type": "Template",
             "command": false,
-            "templatePath": "Utilities/Templates/IMDB Template.md",
+            "templatePath": "Utilities/Templates/Template, Properties, Movie.md",
             "fileNameFormat": {
               "enabled": true,
               "format": "{{VALUE:fileName}}"
@@ -567,7 +460,7 @@
             "folder": {
               "enabled": true,
               "folders": [
-                "Atlas/Notes/Sources/Entertainment"
+                "Atlas/Literature/Annotated"
               ],
               "chooseWhenCreatingNote": false,
               "createInSameFolderAsActiveFile": false,
@@ -579,7 +472,7 @@
               "direction": "vertical",
               "focus": true
             },
-            "openFile": false,
+            "openFile": true,
             "openFileInMode": "default",
             "fileExistsMode": "Increment the file name",
             "setFileExistsBehavior": false
@@ -598,60 +491,6 @@
           "id": "149316c6-9dcc-48d5-9501-7872d9037686",
           "path": "Utilities/Scripts/QuickAdd/log_daily_metrics.js",
           "settings": {}
-        }
-      ],
-      "runOnStartup": false
-    },
-    {
-      "name": "log exercise",
-      "id": "7f10e015-fd96-4e71-969b-21b24f2edb85",
-      "commands": [
-        {
-          "name": "log_exercise",
-          "type": "UserScript",
-          "id": "7578a408-b9bf-41e2-ae7a-89490dd3190e",
-          "path": "Utilities/Scripts/QuickAdd/log_exercise.js",
-          "settings": {}
-        },
-        {
-          "name": "Untitled Capture Choice",
-          "type": "NestedChoice",
-          "id": "bbe62505-04dc-4804-a5ad-216c92cda27a",
-          "choice": {
-            "id": "41e9184c-f5d0-4e5b-94b5-63b6946e1ac2",
-            "name": "Untitled Capture Choice",
-            "type": "Capture",
-            "command": false,
-            "appendLink": false,
-            "captureTo": "",
-            "captureToActiveFile": true,
-            "createFileIfItDoesntExist": {
-              "enabled": false,
-              "createWithTemplate": false,
-              "template": ""
-            },
-            "format": {
-              "enabled": true,
-              "format": "{{VALUE:snippet}}"
-            },
-            "insertAfter": {
-              "enabled": true,
-              "after": "### Workout",
-              "insertAtEnd": false,
-              "considerSubsections": false,
-              "createIfNotFound": false,
-              "createIfNotFoundLocation": "top"
-            },
-            "prepend": false,
-            "task": false,
-            "openFileInNewTab": {
-              "enabled": false,
-              "direction": "vertical",
-              "focus": true
-            },
-            "openFile": false,
-            "openFileInMode": "default"
-          }
         }
       ],
       "runOnStartup": false
@@ -757,10 +596,10 @@
       "id": "0befc0d3-4988-471f-8b20-da383b4442f6",
       "commands": [
         {
-          "name": "select_theme_log",
+          "name": "select_log",
           "type": "UserScript",
-          "id": "cf966c4a-7aa5-4c22-be52-84ae022a184c",
-          "path": "Utilities/Scripts/QuickAdd/select_theme_log.js",
+          "id": "39bfa674-13f1-44b6-b14d-e51f3f7b0e45",
+          "path": "Utilities/Scripts/QuickAdd/select_log.js",
           "settings": {}
         },
         {
@@ -870,114 +709,6 @@
       "runOnStartup": false
     },
     {
-      "name": "log weekly effort",
-      "id": "6df45cc2-05fa-4ad0-b02f-3a3e8f2ad822",
-      "commands": [
-        {
-          "name": "log_weekly_effort",
-          "type": "UserScript",
-          "id": "dce06058-c3cb-4871-a75a-895c95a6ae16",
-          "path": "Utilities/Scripts/QuickAdd/log_weekly_effort.js",
-          "settings": {}
-        },
-        {
-          "name": "Untitled Capture Choice",
-          "type": "NestedChoice",
-          "id": "d691ee08-28bc-42a7-aa6a-aad18208b4fe",
-          "choice": {
-            "id": "22c4b7af-86ba-4e3d-96ab-8d92db8c0e87",
-            "name": "Untitled Capture Choice",
-            "type": "Capture",
-            "command": false,
-            "appendLink": false,
-            "captureTo": "",
-            "captureToActiveFile": true,
-            "createFileIfItDoesntExist": {
-              "enabled": false,
-              "createWithTemplate": false,
-              "template": ""
-            },
-            "format": {
-              "enabled": true,
-              "format": "{{VALUE:snippet}}"
-            },
-            "insertAfter": {
-              "enabled": true,
-              "after": "### Summary",
-              "insertAtEnd": false,
-              "considerSubsections": false,
-              "createIfNotFound": false,
-              "createIfNotFoundLocation": "top"
-            },
-            "prepend": false,
-            "task": false,
-            "openFileInNewTab": {
-              "enabled": false,
-              "direction": "vertical",
-              "focus": true
-            },
-            "openFile": false,
-            "openFileInMode": "default"
-          }
-        }
-      ],
-      "runOnStartup": false
-    },
-    {
-      "name": "📝 Effort Note",
-      "id": "b7d5f103-2b0f-4aac-a0b1-c57f94e82ef2",
-      "commands": [
-        {
-          "name": "suggest_folder",
-          "type": "UserScript",
-          "id": "89d3721c-1498-4418-8e90-6d5bbf03859d",
-          "path": "Utilities/Scripts/QuickAdd/suggest_folder.js",
-          "settings": {
-            "Folder Name": "Efforts/Notes::Efforts/Notes/Budding",
-            "Include Subfolder": false,
-            "Strictly equal path (no subfolders)": "true",
-            "Level of subpaths to include, -1 to include all subpaths": "1"
-          }
-        },
-        {
-          "name": "File name",
-          "type": "NestedChoice",
-          "id": "308c6a6f-89a5-434b-aebe-d85b10e8096d",
-          "choice": {
-            "id": "a7cc5a8c-929f-407d-af1f-19a7ac883dd5",
-            "name": "File name",
-            "type": "Template",
-            "command": false,
-            "templatePath": "Utilities/Templates/Template, Properties, Bare.md",
-            "fileNameFormat": {
-              "enabled": true,
-              "format": "{{name}}"
-            },
-            "folder": {
-              "enabled": true,
-              "folders": [
-                "{{VALUE:selection}}"
-              ],
-              "chooseWhenCreatingNote": false,
-              "createInSameFolderAsActiveFile": false,
-              "chooseFromSubfolders": false
-            },
-            "appendLink": false,
-            "openFileInNewTab": {
-              "enabled": false,
-              "direction": "vertical",
-              "focus": true
-            },
-            "openFile": true,
-            "openFileInMode": "default",
-            "fileExistsMode": "Increment the file name",
-            "setFileExistsBehavior": false
-          }
-        }
-      ],
-      "runOnStartup": false
-    },
-    {
       "name": "📦 Templater",
       "id": "54d936a3-2698-4ee3-a7d5-c4ea0c6c0c41",
       "commands": [
@@ -1021,7 +752,7 @@
   "devMode": false,
   "templateFolderPath": "Utilities/Templates",
   "announceUpdates": true,
-  "version": "1.11.1",
+  "version": "1.13.0",
   "disableOnlineFeatures": true,
   "enableRibbonIcon": false,
   "ai": {

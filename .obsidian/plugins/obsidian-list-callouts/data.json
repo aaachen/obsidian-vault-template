@@ -42,5 +42,11 @@
     "color": "248, 180, 32",
     "icon": "lucide-alert-triangle",
     "custom": true
+  },
+  {
+    "char": "> ",
+    "color": "158, 158, 158",
+    "icon": "lucide-quote",
+    "custom": true
   }
 ]

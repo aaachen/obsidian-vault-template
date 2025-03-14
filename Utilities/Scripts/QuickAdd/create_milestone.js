@@ -26,34 +26,20 @@ async function start(params, settings) {
     );
   }
 
-  // Step 1: Check if kanban board is associated with this effort
-  let kanbanLaneHeaders = undefined;
-  let kanbanFile = undefined;
-  // test if it's an internal link object
-  if (
-    page.board &&
-    page.board.path &&
-    isKanbanPage(dv.page(`${page.board.path}`))
-  ) {
-    // Get kanban lane headers as options to add the milestone to
-    kanbanFile = this.app.vault.getFileByPath(page.board.path);
-    let content = await app.vault.read(kanbanFile);
-    kanbanLaneHeaders = getKanbanLanes(content);
-  }
-
-  // Step 2: Create milestone form
-  const result = await modalForm.openForm(getForm(kanbanLaneHeaders));
+  // Step 1: Create milestone form
+  const result = await modalForm.openForm(getForm());
 
   let milestoneName = result.get("name");
   let milestoneDesc = result.get("description");
   let targetDate = result.get("target") ?? "";
+  let accomplished = result.get("accomplished") ?? false;
 
   if (!milestoneName || !milestoneDesc) {
     console.log("Cancelled create milestone");
     return;
   }
 
-  // Step 3: Add milestone to current effort page
+  // Step 2: Add milestone to current effort page
   const content = await app.vault.read(currentFile);
 
   const milestoneHeader = "Milestone";
@@ -62,7 +48,7 @@ async function start(params, settings) {
   let hash = undefined;
 
   if (match) {
-    let milestone = `- [Milestone:: ${milestoneName}], [Desc:: ${milestoneDesc}], [InitialTarget:: ${targetDate}], [Target:: ${targetDate}], [Accomplished:: ]`;
+    let milestone = `- [Milestone:: ${milestoneName}], [Desc:: ${milestoneDesc}], [Target:: ${targetDate}], [Accomplished:: ${accomplished ? targetDate : ""}]`;
     // get first 6 characters of hash
     hash = await Common.sha256(milestone, 6);
     milestone = `${milestone}\n^${hash}\n`;
@@ -77,73 +63,14 @@ async function start(params, settings) {
   } else {
     throw new Error("Cannot find milestone section in current file");
   }
-
-  if (kanbanLaneHeaders) {
-    let lane = result.get("lane");
-    if (lane) {
-      const re = new RegExp(`(#+)[\\s]*?${lane}\\s*?\n*`, "gm");
-      const milestoneKanbanDivider = `- [ ] ==***[[${currentFile.basename}#^${hash}|Milestone - ${milestoneName}]]***==`;
-      // insert to top of the milestone section
-      await this.app.vault.process(kanbanFile, (data) => {
-        data = data.replace(
-          re,
-          `${match[1]} ${lane}\n\n${milestoneKanbanDivider}\n`
-        );
-        return data;
-      });
-    }
-  }
-}
-
-function isKanbanPage(kanbanPage) {
-  return !!kanbanPage["kanban-plugin"];
-}
-
-/**
- * @param {*} content - file content of the obsidian kanban page
- * @returns list of heading
- */
-function getKanbanLanes(content) {
-  const headers = [];
-  let bodyLines = content.split("\n");
-  bodyLines.forEach((line, index) => {
-    const match = line.match(/^#+[\s]?(.*)$/);
-    if (!match) return;
-    headers.push(match[1]);
-  });
-  return headers;
 }
 
 /**
  * Get the create milestone form
  *
- * @param {*} kanbanLanesHeaders
  * @returns
  */
-function getForm(kanbanLanesHeaders) {
-  let kanbanLaneForm = undefined;
-  if (kanbanLanesHeaders) {
-    let kanbanLanesOptions = kanbanLanesHeaders.map((h) => {
-      return {
-        value: h,
-        label: h,
-      };
-    });
-
-    kanbanLaneForm = {
-      name: "lane",
-      label: "Kanban Lane",
-      description: "Kanban lane to add this milestone to",
-      input: {
-        type: "select",
-        allowUnknownValues: false,
-        options: kanbanLanesOptions,
-        source: "fixed",
-      },
-      isRequired: true,
-    };
-  }
-
+function getForm() {
   let form = {
     title: "Create Milestone",
     fields: [
@@ -159,7 +86,7 @@ function getForm(kanbanLanesHeaders) {
       {
         name: "description",
         label: "Description",
-        description: "What makes up this milestone? Keep it high level",
+        description: "What makes up this milestone?",
         isRequired: true,
         input: {
           type: "text",
@@ -168,18 +95,20 @@ function getForm(kanbanLanesHeaders) {
       {
         name: "target",
         label: "Target Date",
-        description: "Tentative date you like to reach this milestone",
+        description: "Tentative date to reach this milestone",
         isRequired: false,
         input: {
           type: "date",
         },
       },
+      {
+        name: "accomplished",
+        label: "Accomplished?",
+        type: "toggle",
+        description: "",
+        input: { type: "toggle" },
+      },
     ],
   };
-
-  if (kanbanLaneForm) {
-    form.fields.push(kanbanLaneForm);
-  }
-
   return form;
 }

@@ -13,54 +13,50 @@ if (wfdm != wldm) {
 }
 tR += r
 %>
-quarter: '[[<%*
-let q = Math.floor(new Date().getMonth() / 3) + 1;
-let y = new Date().getFullYear();
-tR += `${y} - Q${q}`;
-%>]]'
 ---
 [[<% tp.date.now("YYYY-MM-[w]ww", -7) %>|← Previous Week]] | [[<% tp.date.now("YYYY-MM-[w]ww", 7) %>|Next Week →]]
 
+## ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆
+
 ```dataviewjs
-await dv.view("Utilities/Scripts/Dataview/weekly-dashboard", { startOfWeekDate: "<%tp.date.weekday("gggg-MM-DD", 0)%>", endOfWeekDate: "<%tp.date.weekday("gggg-MM-DD", 6)%>", context: this })
+await dv.view("Utilities/Scripts/Dataview/week/daily-metrics-line-chart", { startOfWeekDate: "<%tp.date.weekday("gggg-MM-DD", 0)%>", endOfWeekDate: "<%tp.date.weekday("gggg-MM-DD", 6)%>", context: this })
 ```
 
 ## Days in this week
 
 Week: <%tp.date.weekday("MMM D", 0)%> - <%tp.date.weekday("MMM D", 6)%>
 
-```dataview
-TABLE WITHOUT ID
-	link(file.link, dateformat(created, "ccc")) as Day,
-	Summary as " "
-FROM [[]]
-WHERE contains(tags, "calendar/day")
-SORT created ASC
-```
-## Milestone
-
 ```dataviewjs
-await dv.view("Utilities/Scripts/Dataview/weekly-milestone-dashboard", { startOfWeekDate: "<%tp.date.weekday("gggg-MM-DD", 0)%>", endOfWeekDate: "<%tp.date.weekday("gggg-MM-DD", 6)%>", context: this })
+await dv.view("Utilities/Scripts/Dataview/week/week-days-summaries", { context: this })
 ```
 
-## Effort
+## Photos 📷 
+
+```photos
+{
+  "filters": {
+    "dateFilter": {
+      "ranges": [
+        {
+          "startDate": {
+            "year": <%tp.date.weekday("YYYY", 0)%>,
+            "month": <%tp.date.weekday("M", 0)%>,
+            "day": <%tp.date.weekday("D", 0)%>
+          },
+          "endDate": {
+            "year": <%tp.date.weekday("YYYY", 6)%>,
+            "month": <%tp.date.weekday("M", 6)%>,
+            "day": <%tp.date.weekday("D", 6)%>
+          }
+        }
+      ]
+    }
+  }
+}
+```
 
 %%
 weight::
-%%
-
-> [!COMPASS]- Accomplishment
-> 
-> `BUTTON[weekly-effort]`
-> 
-> ```dataviewjs
-> await dv.view("Utilities/Scripts/Dataview/weekly-time-spent-dashboard", { startOfWeekDate: "<%tp.date.weekday("gggg-MM-DD", 0)%>", endOfWeekDate: "<%tp.date.weekday("gggg-MM-DD", 6)%>"})
-> ```
-
-### Summary
-
-
-%%
 
 >[!trees]- Vault
 >### Files created this week

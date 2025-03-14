@@ -1,13 +1,9 @@
+// TODO: This should really be renamed as "habits", I'm not doing goals, only log (for what I have accomplished)
 // Handle abstraction for common goals defined in files
-
-// TODO: Define better interface of measurement against goal (current measurement pass from a page file)
 class Goal {
   constructor() {
     this.dvApi = app.plugins.plugins["dataview"].api;
-    const generalHealthPath = "Atlas/+ Maps/🫒 Sleep & Diet";
-    const exercisePath = "Atlas/+ Maps/⛹🏽 Workout & Exercise";
-    const gainWeightPath = "Atlas/+ Maps/🍔 Gain Weight";
-    const readPath = "Atlas/+ Maps/📖 Read";
+    const generalHealthPath = "Atlas/Special/Views/🫒 Sleep & Diet";
     this.goals = new Map([
       [
         "SleepTime",
@@ -44,29 +40,6 @@ class Goal {
           goalKey: "dinner",
         },
       ],
-      [
-        "ExercisesPerWeek",
-        {
-          path: exercisePath,
-          goalKey: "daysExercisedPerWeekTarget",
-        },
-      ],
-      // TODO: pending interface
-      [
-        "WeightGainTarget",
-        {
-          path: gainWeightPath,
-          goalKey: "target",
-        },
-      ],
-      // TODO: pending interface
-      [
-        "ReadTarget",
-        {
-          path: readPath,
-          goalKey: "target",
-        },
-      ],
     ]);
   }
 
@@ -95,14 +68,19 @@ class Goal {
   getHoursPastSleepTimeGoal(p, config) {
     let sleepTime = p.sleep ? moment(p.sleep, "HH:mm") : undefined;
     let { sleepTimeGoal } = config ? config : this.getSleepTimeGoals();
+    // sleep time is in evening
+    if (sleepTime.hour() >= 12 && sleepTime.hour() < 24) {
+      sleepTime = sleepTime.subtract(1, 'days');
+    }
     let pastHours = this.ramp(sleepTime.diff(sleepTimeGoal, "hours", true));
     return pastHours;
   }
 
-  getDietTimeGoals() {
+  getMealTimeGoals() {
     let breakfastTimeGoal = moment(this.getGoal("BreakfastTime"), "HH:mm");
     let lunchTimeGoal = moment(this.getGoal("LunchTime"), "HH:mm");
     let dinnerTimeGoal = moment(this.getGoal("DinnerTime"), "HH:mm");
+    // Just some default value for "X hours past goal" when I skip meals, technically it should be undefined
     let breakfastToLunch = lunchTimeGoal.diff(breakfastTimeGoal, "hours", true);
     let lunchToDinner = dinnerTimeGoal.diff(lunchTimeGoal, "hours", true);
     let dinnerToTen = moment("22:00", "HH:mm").diff(
@@ -125,10 +103,14 @@ class Goal {
     return v < 0 ? 0 : v;
   }
 
-  getHoursPastDietTimeGoal(p, config) {
+  getHoursPastMealTimeGoal(p, config) {
     let breakfastTime = p.breakfast ? moment(p.breakfast, "HH:mm") : undefined;
     let lunchTime = p.lunch ? moment(p.lunch, "HH:mm") : undefined;
     let dinnerTime = p.dinner ? moment(p.dinner, "HH:mm") : undefined;
+    // Edge case: midnight dinner
+    if (dinnerTime && dinnerTime.hour() > 0 && dinnerTime.hour() < 6) {
+      dinnerTime = dinnerTime.add(1, 'days');
+    }
 
     let {
       breakfastTimeGoal,
@@ -137,7 +119,7 @@ class Goal {
       pastBreakfast,
       pastLunch,
       pastDinner,
-    } = config ? config : this.getDietTimeGoals();
+    } = config ? config : this.getMealTimeGoals();
 
     let pastHours = 0;
     pastHours += breakfastTime

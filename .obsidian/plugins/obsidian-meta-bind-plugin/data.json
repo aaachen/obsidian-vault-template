@@ -17,62 +17,6 @@
   "inputFieldTemplates": [],
   "buttonTemplates": [
     {
-      "label": "💪 Effort",
-      "hidden": false,
-      "class": "",
-      "tooltip": "",
-      "id": "log-effort",
-      "style": "default",
-      "actions": [
-        {
-          "type": "command",
-          "command": "quickadd:choice:7290bedf-6711-4b85-8ec0-ecdaae9c12b1"
-        }
-      ]
-    },
-    {
-      "label": "🏋️Exercise",
-      "hidden": false,
-      "class": "",
-      "tooltip": "",
-      "id": "log-exercise",
-      "style": "default",
-      "actions": [
-        {
-          "type": "command",
-          "command": "quickadd:choice:7acc5721-6c95-4a2c-ba2f-94ae1270e23f"
-        }
-      ]
-    },
-    {
-      "label": "🍅 Rate",
-      "hidden": false,
-      "class": "",
-      "tooltip": "",
-      "id": "log-daily",
-      "style": "default",
-      "actions": [
-        {
-          "type": "command",
-          "command": "quickadd:choice:11f74a30-0c40-454d-a37a-202c9f25ac87"
-        }
-      ]
-    },
-    {
-      "label": "📜Log",
-      "hidden": false,
-      "class": "",
-      "tooltip": "open theme log",
-      "id": "open-theme-log",
-      "style": "default",
-      "actions": [
-        {
-          "type": "command",
-          "command": "quickadd:choice:3a3ed22f-6847-410b-9317-fc903f80191b"
-        }
-      ]
-    },
-    {
       "label": "Append Log",
       "hidden": false,
       "class": "",
@@ -87,48 +31,20 @@
       ]
     },
     {
-      "label": "✍️ Journal",
-      "hidden": false,
-      "class": "",
-      "tooltip": "",
-      "id": "open-journal",
-      "style": "default",
-      "actions": [
-        {
-          "type": "open",
-          "link": "[[Journal Log]]"
-        }
-      ]
-    },
-    {
-      "label": "🗓️ Calendar",
-      "hidden": false,
-      "class": "",
-      "tooltip": "",
-      "id": "open-calendar",
-      "style": "default",
-      "actions": [
-        {
-          "type": "command",
-          "command": "obsidian-full-calendar:full-calendar-open"
-        }
-      ]
-    },
-    {
       "label": "🗓️ Year",
-      "id": "yearly-dashboard",
+      "id": "year",
       "style": "primary",
       "class": "home-btn",
       "hidden": true,
       "actions": [
         {
           "type": "open",
-          "link": "[[2024 - Dashboard]]"
+          "link": "[[2024 - Vision and Reflection]]"
         }
       ]
     },
     {
-      "label": "📍Create",
+      "label": "📍 Create",
       "icon": "",
       "hidden": false,
       "class": "",
@@ -143,7 +59,7 @@
       ]
     },
     {
-      "label": "📍Update",
+      "label": "📍 Update",
       "icon": "",
       "hidden": false,
       "class": "",
@@ -168,38 +84,24 @@
       "actions": [
         {
           "type": "open",
-          "link": "[[This Week's Menu]]"
+          "link": "[[Week's Menu]]"
         }
       ]
     },
     {
-      "label": "Summarize",
+      "label": "🪵 Log",
       "icon": "",
       "hidden": false,
       "class": "",
-      "tooltip": "Summarize weekly accomplishments!",
-      "id": "weekly-effort",
-      "style": "primary",
+      "tooltip": "",
+      "id": "select-log",
+      "style": "default",
       "actions": [
         {
           "type": "command",
-          "command": "quickadd:choice:64fb3024-8a80-4b89-9a61-c58bf691d111"
+          "command": "quickadd:choice:3a3ed22f-6847-410b-9317-fc903f80191b"
         }
       ]
-    },
-    {
-      "label": "💡 Idea",
-      "id": "open-memos",
-      "style": "default",
-      "class": "memo-btn",
-      "hidden": false,
-      "actions": [
-        {
-          "type": "open",
-          "link": "[[Idea Log]]"
-        }
-      ],
-      "tooltip": "Open memos"
     }
   ],
   "excludedFolders": [

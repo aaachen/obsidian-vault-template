@@ -1,0 +1,6 @@
+{
+  "new-note-template": "Utilities/Templates/Template, Properties, Base.md",
+  "archive-with-date": true,
+  "append-archive-date": false,
+  "new-card-insertion-method": "prepend-compact"
+}

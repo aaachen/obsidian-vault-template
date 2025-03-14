@@ -44,6 +44,8 @@ async function start(params, settings) {
   QuickAdd.variables = {
     fileName: replaceIllegalFileNameCharactersInString(title),
     days: days,
+    startDate: startDate.format("yyyy-MM-DD"),
+    endDate: endDate.format("yyyy-MM-DD")
   };
 }
 

@@ -1,0 +1,25 @@
+{
+  "accentColor": "",
+  "enabledCssSnippets": [
+    "nick-milo-callouts",
+    "minimal-cards-table",
+    "MCL Wide Views",
+    "MCL Multi Column",
+    "MCL Gallery Cards",
+    "cornell-banner-v2",
+    "banner-plugin-patch",
+    "patches",
+    "mobile",
+    "e-matrix",
+    "andrew-minimal-theme-setup",
+    "cornell",
+    "cornell-theme-minimal",
+    "nick-milo-callout-colors",
+    "daily-note-cards",
+    "vis-timeline-graph2d.min",
+    "common"
+  ],
+  "cssTheme": "Primary",
+  "theme": "system",
+  "baseFontSize": 16
+}

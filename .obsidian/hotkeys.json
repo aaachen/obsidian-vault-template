@@ -587,7 +587,7 @@
   "workspace:next-tab": [
     {
       "modifiers": [
-        "Mod"
+        "Ctrl"
       ],
       "key": "Tab"
     }
@@ -595,7 +595,7 @@
   "workspace:previous-tab": [
     {
       "modifiers": [
-        "Mod",
+        "Ctrl",
         "Shift"
       ],
       "key": "Tab"
@@ -652,14 +652,6 @@
       "key": "W"
     }
   ],
-  "obsidian-hotkeys-for-specific-files:Home.md": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "H"
-    }
-  ],
   "omnisearch:show-modal": [
     {
       "modifiers": [
@@ -677,14 +669,6 @@
       "key": "E"
     }
   ],
-  "obsidian-excalidraw-plugin:toggle-excalidraw-view": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "E"
-    }
-  ],
   "graph:open": [],
   "file-explorer:new-file": [],
   "quickadd:choice:cea4d3e9-8084-478d-ba88-3ccea0c66fc4": [
@@ -693,6 +677,24 @@
         "Mod"
       ],
       "key": "N"
+    }
+  ],
+  "obsidian-excalidraw-plugin:toggle-excalidraw-view": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "E"
+    }
+  ],
+  "obsidian-hotkeys-for-specific-files:Home.md": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "H"
     }
   ]
 }

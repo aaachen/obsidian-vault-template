@@ -3,7 +3,7 @@ up:
   - "[[Themed Logs]]"
 created: <% tp.date.now() %>
 tags:
-  - log/theme
+  - log
 ---
 
 `BUTTON[append-log]` 

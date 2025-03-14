@@ -49,15 +49,11 @@ async function start(params, settings) {
   let milestoneDesc = Common.toArray(page.Desc);
   let oldMilestoneDesc = milestoneDesc[i];
   let targetDate = Common.toArray(page.Target) ?? [undefined];
-  let initialTarget = Common.toArray(page.InitialTarget) ?? [undefined];
   let accomplished = Common.toArray(page.Accomplished) ?? [undefined];
 
   let currentMilestoneValues = {
     name: oldMilestoneName,
     description: oldMilestoneDesc,
-    initialTarget: initialTarget[i]
-      ? initialTarget[i].toFormat("yyyy-MM-dd")
-      : "",
     target: targetDate[i] ? targetDate[i].toFormat("yyyy-MM-dd") : "",
     accomplished: accomplished[i] ? accomplished[i].toFormat("yyyy-MM-dd") : "",
   };
@@ -69,7 +65,6 @@ async function start(params, settings) {
 
   let milestoneName = result.get("name");
   milestoneDesc = result.get("description");
-  initialTarget = result.get("initialTarget") ?? "";
   targetDate = result.get("target") ?? "";
   accomplished = result.get("accomplished") ?? "";
 
@@ -79,10 +74,10 @@ async function start(params, settings) {
   }
 
   // Step 5: Update current file
-  let hash = await updateMilestone(
+  await updateMilestone(
     oldMilestoneName,
     oldMilestoneDesc,
-    [milestoneName, milestoneDesc, initialTarget, targetDate, accomplished],
+    [milestoneName, milestoneDesc, targetDate, accomplished],
     currentFile
   );
 }
@@ -101,7 +96,7 @@ function escapeRegex(string) {
  * @returns hash of the updated milestone (as side effect)
  */
 async function updateMilestone(oldName, oldDesc, result, currentFile) {
-  const [name, desc, initialTarget, target, accomplished] = [...result];
+  const [name, desc, target, accomplished] = [...result];
   const content = await app.vault.read(currentFile);
 
   const re = new RegExp(
@@ -116,7 +111,7 @@ async function updateMilestone(oldName, oldDesc, result, currentFile) {
   // Update milestone
   if (match) {
     hash = match[1];
-    let newMilestone = `- [Milestone:: ${name}], [Desc:: ${desc}], [InitialTarget:: ${initialTarget}], [Target:: ${target}], [Accomplished:: ${accomplished}]\n^${hash}\n`;
+    let newMilestone = `- [Milestone:: ${name}], [Desc:: ${desc}], [Target:: ${target}], [Accomplished:: ${accomplished}]\n^${hash}\n`;
     await this.app.vault.process(currentFile, (data) => {
       data = data.replace(re, newMilestone);
       return data;
@@ -186,15 +181,6 @@ function getUpdateMilestoneForm() {
         isRequired: true,
         input: {
           type: "text",
-        },
-      },
-      {
-        name: "initialTarget",
-        label: "Initial Target Date",
-        description: "Initial date you set to reach this milestone",
-        isRequired: false,
-        input: {
-          type: "date",
         },
       },
       {

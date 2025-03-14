@@ -10,8 +10,8 @@ month: '[[<% tp.date.now("YYYY-MM", 0, tp.file.title, "yyyy-MM-DD - ddd MMM D")%
 ## 🍃
 [[<% tp.date.now("gggg-MM-DD - ddd MMM D", -1, tp.file.title, "yyyy-MM-DD - ddd MMM D") %>|← Previous Day]] | [[<% tp.date.now("gggg-MM-DD - ddd MMM D", 1, tp.file.title, "yyyy-MM-DD - ddd MMM D") %>|Next Day →]]
 
-> [!COMPASS]-
->`BUTTON[log-effort]`   `BUTTON[log-daily]`   `BUTTON[open-memos]`
+> [!compass]- 
+> `BUTTON[select-log]`
 >
 >> [!Sun]+ For today
 >>
@@ -39,9 +39,6 @@ month: '[[<% tp.date.now("YYYY-MM", 0, tp.file.title, "yyyy-MM-DD - ddd MMM D")%
 
 
 
-
-
-
 ## On this day
 
 > [!camera]+ Memories
@@ -49,17 +46,14 @@ month: '[[<% tp.date.now("YYYY-MM", 0, tp.file.title, "yyyy-MM-DD - ddd MMM D")%
 > notedate
 > ```
 
+<%*
+let today = moment();
+today.set('year', 2024);
+tR += `[[${today.format("yyyy-MM-DD - ddd MMM D")}|🛣️]]`
+%>
+
 ## Backlinks
 ```dataviewjs
-dv.view("Utilities/Scripts/Dataview/daily-conversation-thoughts")
+dv.view("Utilities/Scripts/Dataview/day-backlinks")
 ```
 
-%%
-## Time Spent
-
-## Logging
-
-proud:: 3
-
-
-%%

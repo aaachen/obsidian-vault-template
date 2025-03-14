@@ -1,0 +1,110 @@
+{
+  "devMode": false,
+  "ignoreCodeBlockRestrictions": false,
+  "preferredDateFormat": "YYYY-MM-DD",
+  "firstWeekday": {
+    "index": 1,
+    "name": "Monday",
+    "shortName": "Mo"
+  },
+  "syncInterval": 200,
+  "minSyncInterval": 50,
+  "maxSyncInterval": 1000,
+  "enableJs": false,
+  "viewFieldDisplayNullAsEmpty": false,
+  "enableSyntaxHighlighting": true,
+  "enableEditorRightClickMenu": true,
+  "inputFieldTemplates": [],
+  "buttonTemplates": [
+    {
+      "label": "Append Log",
+      "hidden": false,
+      "class": "",
+      "tooltip": "",
+      "id": "append-log",
+      "style": "primary",
+      "actions": [
+        {
+          "type": "command",
+          "command": "quickadd:choice:bc0c3d3a-7699-42fa-ba12-a74d369619c9"
+        }
+      ]
+    },
+    {
+      "label": "🗓️ Year",
+      "id": "year",
+      "style": "primary",
+      "class": "home-btn",
+      "hidden": true,
+      "actions": [
+        {
+          "type": "open",
+          "link": "[[2024 - Vision and Reflection]]"
+        }
+      ]
+    },
+    {
+      "label": "📍 Create",
+      "icon": "",
+      "hidden": false,
+      "class": "",
+      "tooltip": "Create a milestone!",
+      "id": "create-milestone",
+      "style": "primary",
+      "actions": [
+        {
+          "type": "command",
+          "command": "quickadd:choice:a0200edd-b308-4baa-b9d3-3e50eca7db43"
+        }
+      ]
+    },
+    {
+      "label": "📍 Update",
+      "icon": "",
+      "hidden": false,
+      "class": "",
+      "tooltip": "Update a milestone!",
+      "id": "update-milestone",
+      "style": "primary",
+      "actions": [
+        {
+          "type": "command",
+          "command": "quickadd:choice:9c3b876e-ac30-440c-952e-3edefb1435d5"
+        }
+      ]
+    },
+    {
+      "label": "🍽️ Week Menu",
+      "icon": "",
+      "hidden": false,
+      "class": "",
+      "tooltip": "",
+      "id": "week-menu",
+      "style": "primary",
+      "actions": [
+        {
+          "type": "open",
+          "link": "[[Week's Menu]]"
+        }
+      ]
+    },
+    {
+      "label": "🪵 Log",
+      "icon": "",
+      "hidden": false,
+      "class": "",
+      "tooltip": "",
+      "id": "select-log",
+      "style": "default",
+      "actions": [
+        {
+          "type": "command",
+          "command": "quickadd:choice:3a3ed22f-6847-410b-9317-fc903f80191b"
+        }
+      ]
+    }
+  ],
+  "excludedFolders": [
+    "templates"
+  ]
+}

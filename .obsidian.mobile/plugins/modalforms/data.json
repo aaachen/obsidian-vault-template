@@ -1,0 +1,44 @@
+{
+  "editorPosition": "mainView",
+  "attachShortcutToGlobalWindow": false,
+  "globalNamespace": "MF",
+  "formDefinitions": [
+    {
+      "title": "Occasion",
+      "name": "occasion",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "description": "Title of this occasion",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "startDate",
+          "label": "Start Date",
+          "description": "Start date",
+          "isRequired": true,
+          "input": {
+            "type": "date",
+            "hidden": false
+          }
+        },
+        {
+          "name": "endDate",
+          "label": "End Date",
+          "description": "End date",
+          "isRequired": true,
+          "input": {
+            "type": "date",
+            "hidden": false
+          }
+        }
+      ],
+      "version": "1"
+    }
+  ]
+}

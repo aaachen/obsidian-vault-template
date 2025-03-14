@@ -4,23 +4,6 @@
   "globalNamespace": "MF",
   "formDefinitions": [
     {
-      "title": "Rate",
-      "name": "log_daily_metrics",
-      "fields": [
-        {
-          "name": "proud",
-          "label": "Rate 🍅",
-          "description": "How proud are you of today, from 0 to 5?",
-          "isRequired": false,
-          "input": {
-            "type": "number",
-            "hidden": false
-          }
-        }
-      ],
-      "version": "1"
-    },
-    {
       "title": "Occasion",
       "name": "occasion",
       "fields": [

@@ -1,8 +1,6 @@
 ---
 up:
   - "[[Occasions]]"
-places: 
-companions: 
 created: <% tp.date.now() %>
 tags:
   - occasion
@@ -10,7 +8,10 @@ tags:
 <%*
 let days = "{{VALUE:days}}".split(',');
 let daysDate = days.map(d => moment(d, "yyyy-MM-DD - ddd MMM D"));
-function daysOnTripSection() {
+	let startDate = moment("{{VALUE:startDate}}", "yyyy-MM-DD");
+let endDate = moment("{{VALUE:endDate}}", "yyyy-MM-DD");
+let daysLink;
+function daysInOccasionSection() {
     const dv = app.plugins.plugins["dataview"].api;
 	let weeks = new Set();
 	days.forEach(d => {
@@ -20,24 +21,52 @@ function daysOnTripSection() {
 		}
 	});
 	weeks = Array.from(weeks).map(w => `[[${w}]]`)
-	let daysLink = daysDate.map((d, i) => `[[${days[i]}|${d.format('MMM D')}]]`)
-	let year = daysDate[0].year();
-	return `> [!CALENDAR]+ ### Occasion
-> This occasion took place in [[${year} - Vision and Reflection|${year}]] on the following days and weeks
+	let daysPrepend = ">";
+	daysLink = daysDate.map((d, i) => `[[${days[i]}|${d.format('MMM D')}]]`)
+	
+	let dvCodeBlock = `> \`\`\`dataviewjs
+> await dv.view("Utilities/Scripts/Dataview/occasion/multi-days-occasion", { context: this })
+> \`\`\``
+	
+	return `> [!CALENDAR]+ Occasion
+> This took place on the following days and week${weeks.length > 1 ? "s" : ""}
 > **Week**: ${weeks.join(", ")}
-> **Day**: ${daysLink.join(", ")} 
+${dvCodeBlock}
 `
 }
-tR += daysOnTripSection();
+tR += daysInOccasionSection();
 %>
 
-## Journal
+## Photos 📷 
 
-```query
-tag:⭐️hlt
-file: (<%*tR += daysDate.map(d => d.format('yyyy-MM-DD')).join(" OR ")%>)
+```photos
+{
+  "filters": {
+    "dateFilter": {
+      "ranges": [
+        {
+          "startDate": {
+            "year": <%* tR += startDate.year() %>,
+            "month": <%* tR += startDate.month() + 1 %>,
+            "day": <%* tR += startDate.date() %>
+          },
+          "endDate": {
+            "year": <%* tR += endDate.year() %>,
+            "month": <%* tR += endDate.month() + 1 %>,
+            "day": <%* tR += endDate.date() %>
+          }
+        }
+      ]
+    }
+  }
+}
 ```
 
-## Jot
 
 
+
+<%*
+tR += `%%
+${daysLink.join(", ")}
+%%`
+%>
