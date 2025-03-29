@@ -10,13 +10,10 @@
 .obsidian/todoist-token
 
 # Remove large media, use plugin to sync
-Utilities/Images
-Utilities/Kindle
+# Utilities/Images
 
 # Exclude "bad" names
 null*
 .trash/
-
 .DS_STORE
-
 **/.md
