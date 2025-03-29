@@ -160,6 +160,6 @@
     "Compass/Journal/"
   ],
   "showInlineTitle": true,
-  "vimMode": true,
+  "vimMode": false,
   "propertiesInDocument": "visible"
 }
