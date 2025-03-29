@@ -1,13 +1,7 @@
----
-up:
-  - "[[Home]]"
-created: 2025-03-13
-modified: 2025-03-14
----
 
 Obsidian vault for a software developer and casual writer, mobile and desktop friendly
 
-TODO: post link
+[Post](https://axyc.me/notes/Obsidian-tips--and--tricks)
 
 ## Hotkeys
 
@@ -19,14 +13,14 @@ Search
 
 Quick access
 - `CMD + SHIFT + H` -> [[Home]]
-	- *my default new tab on mobile*
-- `OPTION + D` -> Daily note ([[2024-03-13 - Wed Mar 13|Example]])
-	- *my default tab* 
+	- *my default "new" tab on mobile*
+- `OPTION + D` -> Daily note ([[2024-03-11 - Mon Mar 11|Example]])
+	- *my default tab to switch to on mobile*
 - `OPTION + W` -> Weekly note
 - `OPTION + M` -> Monthly note
 
 Doodling
-- `CMD + SHIFT + E` -> Convert a note to visual zettel (a note with text on front and drawing on back - [[Some Note|Example]]) 
+- `CMD + SHIFT + E` -> Convert a note to visual zettel (a note with text on front and drawing on back - [[Some Design|Example]]) 
 - `OPTION + SHIFT + E` -> Toggle between the two sides for ^
 
 ## Folders

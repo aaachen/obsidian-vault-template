@@ -71,7 +71,7 @@
               },
               "format": {
                 "enabled": true,
-                "format": "## [[{{DATE:yyyy-MM-DD - ddd MMM D}}]]\n\n\n"
+                "format": "## [[{{DATE:yyyy-MM-DD - ddd MMM D}}]]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
               },
               "insertAfter": {
                 "enabled": true,

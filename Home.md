@@ -35,7 +35,7 @@ modified: 2025-03-14
 > > [!Calendar]+ Calendar
 > > - `=link("Journal Log", "📕Journal")`
 > > -  `=link(dateformat(date(today), "yyyy-MM-wWW"), "🐛 Week")` | `=link(dateformat(date(today), "yyyy-MM"), "🦋 Month")`
-> > - [[Yearbooks|🎇 Yearbooks]] | [[Occasions|🏞️ Occasions]]
+> > - [[Occasions|🏞️ Occasions]] | [[Yearbooks|🎇 Yearbooks]]
 > 
 > > [!Training]+ Effort
 > > - [[💪 Efforts]] 

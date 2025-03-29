@@ -165,7 +165,7 @@
         },
         {
           "id": "5a108093-3c5c-4ede-842f-54bc704804ec",
-          "name": "🗓️ Excerpt",
+          "name": "🗓️ Notes (Calendar)",
           "type": "Template",
           "command": false,
           "templatePath": "Utilities/Templates/Template, Properties, Base.md",
@@ -323,10 +323,10 @@
           "name": "🎞️ Movies & Games",
           "type": "Macro",
           "command": false,
-          "macroId": "856998ab-624a-4913-975e-80ebe7a820a0"
+          "macroId": "99804cbb-956a-493c-b10d-af3b680de39b"
         }
       ],
-      "collapsed": true
+      "collapsed": false
     }
   ],
   "macros": [

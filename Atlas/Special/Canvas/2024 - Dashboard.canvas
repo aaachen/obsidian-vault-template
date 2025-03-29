@@ -2,10 +2,8 @@
 	"nodes":[
 		{"id":"fd2835ad2f855310","type":"group","x":720,"y":-800,"width":960,"height":2040,"color":"#56a8f5","label":"🏞️ Life"},
 		{"id":"7fcdf5a9270503ff","type":"group","x":-1680,"y":-480,"width":1080,"height":1400,"color":"4","label":"🪴 Wellness"},
-		{"id":"f5255d08de4e0f09","type":"group","x":-400,"y":-560,"width":800,"height":568,"color":"3","label":"🏋 Training"},
 		{"id":"c3e1e6e940a8b00c","type":"group","x":-360,"y":560,"width":720,"height":360,"color":"6","label":"🎭 Literature"},
 		{"id":"20092d2917f8faae","type":"text","text":"\n```dataviewjs\nawait dv.view(\"Utilities/Scripts/Dataview/year/calendar-heatmap\", { context: this, year: 2024 })\n```\n<span class=\"center-menu\">[[2023 - Vision and Reflection|<-]] | [[2024 - Vision and Reflection|2024 - The Year of ...]] | [[2025 - Dashboard.canvas|->]] </span> ","x":-488,"y":120,"width":1088,"height":320},
-		{"id":"4c0bda2fab310452","type":"text","text":"## Weight\n\n```dataviewjs\nawait dv.view(\"Utilities/Scripts/Dataview/year/weight-trend\", { context: this, year: 2024 })\n```\n","x":-385,"y":-512,"width":745,"height":480},
 		{"id":"f51cf4645fe50e0d","type":"text","text":"## Sleep trend\n\n```dataviewjs\nawait dv.view(\"Utilities/Scripts/Dataview/year/sleep-trend\", { context: this, year: 2024 })\n```","x":-1600,"y":-400,"width":900,"height":600},
 		{"id":"304d99a375b40644","type":"text","text":"## Meal trend\n\n```dataviewjs\nawait dv.view(\"Utilities/Scripts/Dataview/year/meal-time-trend\", { context: this , year: 2024 })\n```","x":-1600,"y":240,"width":900,"height":640},
 		{"id":"87ed8d925ef6a665","type":"text","text":"## Journal\n\n[![[journal-art-stamprints.webp|300]]](2024%20-%20Journal%20Log.md)\n","x":740,"y":-776,"width":380,"height":336},
@@ -18,7 +16,6 @@
 	],
 	"edges":[
 		{"id":"aca8223bc7d77437","fromNode":"20092d2917f8faae","fromSide":"left","toNode":"7fcdf5a9270503ff","toSide":"right"},
-		{"id":"4cc337dcb3daf090","fromNode":"20092d2917f8faae","fromSide":"top","toNode":"f5255d08de4e0f09","toSide":"bottom"},
 		{"id":"eac7717913b93a66","fromNode":"20092d2917f8faae","fromSide":"right","toNode":"fd2835ad2f855310","toSide":"left"},
 		{"id":"78fe049057841b79","fromNode":"c3e1e6e940a8b00c","fromSide":"top","toNode":"20092d2917f8faae","toSide":"bottom"}
 	]
