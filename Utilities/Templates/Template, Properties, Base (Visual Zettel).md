@@ -1,9 +1,9 @@
 ---
-up: 
-excalidraw-plugin: parsed
+created: <% tp.date.now() %>
 tags:
-  - excalidraw/zettel
   - seed🌱
+  - excalidraw/zettel
+excalidraw-plugin: parsed
 excalidraw-open-md: true
 ---
 

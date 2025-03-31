@@ -56,7 +56,6 @@ await dv.view("Utilities/Scripts/Dataview/week/week-days-summaries", { context: 
 ```
 
 %%
-weight::
 
 >[!trees]- Vault
 >### Files created this week

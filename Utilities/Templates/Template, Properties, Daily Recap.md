@@ -12,18 +12,6 @@ month: '[[<% tp.date.now("YYYY-MM", 0, tp.file.title, "yyyy-MM-DD - ddd MMM D")%
 
 > [!compass]- 
 > `BUTTON[select-log]`
->
->> [!Sun]+ For today
->>
->>```todoist
->>filter: "due before: <% tp.date.now("YYYY-MM-DD", 0, tp.file.title, "yyyy-MM-DD - ddd MMM D")%> | due: <% tp.date.now("YYYY-MM-DD", 0, tp.file.title, "yyyy-MM-DD - ddd MMM D")%>"
->>show:
->> - description
->> - due
->>sorting:
->>  - date
->>  - priority
->>```
 
 ## Interstitial Journal
 
