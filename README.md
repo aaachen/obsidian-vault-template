@@ -30,3 +30,8 @@ I use a modified version of the [ACE](https://medium.com/obsidian-observer/ace-a
 - Calendar -> anything time related (Time)
 - Efforts -> anything action/project related (Space-Time)
 
+
+# Changelog
+
+- Simplify home page UX & minor bug fix - 2025-04-02
+

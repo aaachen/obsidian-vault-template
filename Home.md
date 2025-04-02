@@ -9,7 +9,7 @@ banner_x: 0.46038
 obsidianUIMode: preview
 modified: 2025-03-14
 ---
-<span class="center-menu">`BUTTON[week-menu]` 🌱 `BUTTON[year]` </span>
+<span class="center-menu">༻`BUTTON[week-menu]`༺</span>
 
 > [!SUN]- Habit
 >
@@ -34,8 +34,7 @@ modified: 2025-03-14
 >
 > > [!Calendar]+ Calendar
 > > - `=link("Journal Log", "📕Journal")`
-> > -  `=link(dateformat(date(today), "yyyy-MM-wWW"), "🐛 Week")` | `=link(dateformat(date(today), "yyyy-MM"), "🦋 Month")`
-> > - [[Occasions|🏞️ Occasions]] | [[Yearbooks|🎇 Yearbooks]]
+> > - [[Yearbooks|🎆 Yearbooks]] | [[Occasions|💫 Occasion]]
 > 
 > > [!Training]+ Effort
 > > - [[💪 Efforts]] 

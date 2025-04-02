@@ -4,13 +4,14 @@ up:
 modified: 2025-03-14
 ---
 
-Things I want to do this week
-1. abc
-2. efd
+#### Main Course
 
+- Some things I want to focus on
 
+#### Side Courses
+
+- Hobbies to indulge in
 
 %%
-somethings in the back of my head
+things in the back of my head
 %%
-

@@ -31,19 +31,6 @@
       ]
     },
     {
-      "label": "🗓️ Year",
-      "id": "year",
-      "style": "primary",
-      "class": "home-btn",
-      "hidden": true,
-      "actions": [
-        {
-          "type": "open",
-          "link": "[[2024 - Vision and Reflection]]"
-        }
-      ]
-    },
-    {
       "label": "📍 Create",
       "icon": "",
       "hidden": false,

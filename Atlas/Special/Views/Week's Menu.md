@@ -17,10 +17,10 @@ Week: `=link(dateformat(date(today), "yyyy-MM-wWW"))`
 ![[Week's Scratchpad]]
 [[Week's Scratchpad|📝 Edit]]
 
->[!todo]+ Scheduled
+>[!todo]- Scheduled
 >
 >```todoist
->filter: "overdue | (all & 7 days)"
+>filter: "(overdue | (all & 7 days)) & !@habit"
 >show:
 > - description
 > - due
