@@ -15,8 +15,6 @@ month: '[[<% tp.date.now("YYYY-MM", 0, tp.file.title, "yyyy-MM-DD - ddd MMM D")%
 
 ## Interstitial Journal
 
-> Summary:: 
-
 - [sleep::]
 - [wake::]
 - [breakfast::]

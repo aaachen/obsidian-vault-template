@@ -3,6 +3,10 @@ Obsidian vault for a software developer and casual writer, mobile and desktop fr
 
 [Post](https://axyc.me/notes/Obsidian-tips--and--tricks)
 
+## Setup
+
+In mobile, override the config folder to `.obsidian.mobile`. This setting can be found under `Files And Links`
+
 ## Hotkeys
 
 - `CMD + N` -> New note
