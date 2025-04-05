@@ -13,6 +13,41 @@
           "command": false,
           "choices": [
             {
+              "id": "9d6f0d34-1235-44d3-9390-ae9ae57950cc",
+              "name": "append highlight",
+              "type": "Capture",
+              "command": true,
+              "appendLink": false,
+              "captureTo": "",
+              "captureToActiveFile": true,
+              "createFileIfItDoesntExist": {
+                "enabled": false,
+                "createWithTemplate": false,
+                "template": ""
+              },
+              "format": {
+                "enabled": true,
+                "format": "> HL:: "
+              },
+              "insertAfter": {
+                "enabled": false,
+                "after": "",
+                "insertAtEnd": false,
+                "considerSubsections": false,
+                "createIfNotFound": false,
+                "createIfNotFoundLocation": "top"
+              },
+              "prepend": false,
+              "task": false,
+              "openFileInNewTab": {
+                "enabled": false,
+                "direction": "vertical",
+                "focus": true
+              },
+              "openFile": false,
+              "openFileInMode": "default"
+            },
+            {
               "id": "7df8090a-7b03-4a73-b29b-bb2972ecbc9c",
               "name": "append time stamp",
               "type": "Capture",
@@ -48,7 +83,7 @@
               "openFileInMode": "default"
             }
           ],
-          "collapsed": true
+          "collapsed": false
         },
         {
           "id": "70b3eb0d-0e7e-444c-9c85-41351484de50",
@@ -102,7 +137,7 @@
           "collapsed": true
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "id": "513101f6-499f-436c-a053-978a6720d0ee",
@@ -135,7 +170,7 @@
       "choices": [
         {
           "id": "a5051922-e590-4f7c-8e6a-34b76ae8bd68",
-          "name": "📥 Notes",
+          "name": "📥 Note",
           "type": "Template",
           "command": false,
           "templatePath": "Utilities/Templates/Template, Properties, Base.md",
@@ -165,7 +200,7 @@
         },
         {
           "id": "5a108093-3c5c-4ede-842f-54bc704804ec",
-          "name": "🗓️ Notes (Calendar)",
+          "name": "🗓️ Note (Calendar)",
           "type": "Template",
           "command": false,
           "templatePath": "Utilities/Templates/Template, Properties, Base.md",
@@ -326,7 +361,7 @@
           "macroId": "99804cbb-956a-493c-b10d-af3b680de39b"
         }
       ],
-      "collapsed": false
+      "collapsed": true
     }
   ],
   "macros": [

@@ -9,11 +9,11 @@ function getFileLinksData(yr) {
         .where(p => p.tags.some(t => t === occasionTagName.substring(1)))
         .values;
     const fileLinks = pages.map(p => {
-        if (p.occasion || p.summary) {
+        if (p.occasion || p.HL) {
             // a daily note with occasion field as description
             return {
                 date: p.created.toFormat('yyyy-MM-dd'),
-                occasion: p.occasion ? p.occasion : p.summary,
+                occasion: p.occasion ? p.occasion : p.HL,
                 path: p.file.path
             }
         } else {
@@ -63,3 +63,4 @@ if (allInCallouts) {
         .join('\n') + '\n';
     dv.paragraph(paragraph);
 }
+

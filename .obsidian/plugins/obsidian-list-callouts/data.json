@@ -1,7 +1,7 @@
 [
   {
     "color": "255, 214, 0",
-    "char": "~l",
+    "char": "i",
     "icon": "lucide-lightbulb"
   },
   {
@@ -30,18 +30,6 @@
     "color": "158, 158, 158",
     "char": "%",
     "icon": "lucide-message-circle"
-  },
-  {
-    "char": "~*",
-    "color": "238, 233, 83",
-    "custom": true,
-    "icon": "lucide-star"
-  },
-  {
-    "char": "~!",
-    "color": "248, 180, 32",
-    "icon": "lucide-alert-triangle",
-    "custom": true
   },
   {
     "char": "> ",

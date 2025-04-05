@@ -33,5 +33,6 @@ I use a modified version of the [ACE](https://medium.com/obsidian-observer/ace-a
 
 # Changelog
 
+- Change Summary to "Highlight" - 2025-04-05
 - Simplify home page UX & minor bug fix - 2025-04-02
 

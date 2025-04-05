@@ -17,7 +17,7 @@ files = Array.from(files);
 
 let rows = files.map(p => [
   dv.fileLink(p.file.path, false, p.created.toFormat("MMM dd")),
-  p.summary
+  p.HL
 ]);
 
 
@@ -52,3 +52,4 @@ if (logCallout) {
   logCallout = `>[!book]- Journal\n` + Common.wrapInQuoteBlock(logCallout);
 }
 dv.paragraph(logCallout);
+

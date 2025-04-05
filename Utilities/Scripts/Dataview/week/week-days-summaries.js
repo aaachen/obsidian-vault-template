@@ -4,7 +4,7 @@ let files = dv.current().file.inlinks
   .sort(p => p.created)
   .map(p => [
     dv.fileLink(p.file.path, false, p.created.toFormat("ccc")),
-    `${isOccasion(p) ? "💫 " : ""}${p.summary ? p.summary : "\\-"}`
+    `${isOccasion(p) ? "💫 " : ""}${p.HL ? p.HL : "\\-"}`
   ]);
 
 dv.table(["Day", ""], files)
@@ -18,3 +18,4 @@ function isOccasion(page) {
   const isOccasion = page.tags && page.tags.includes("occasion");
   return isOccasion || isPartOfOccasion;
 }
+
