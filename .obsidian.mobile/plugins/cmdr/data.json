@@ -24,9 +24,9 @@
   "statusBar": [],
   "pageHeader": [
     {
-      "id": "obsidian-hotkeys-for-specific-files:Home.md-new-tab",
+      "id": "quickadd:choice:444aaf53-ee3c-4251-830f-57990ab9b8db",
       "icon": "home",
-      "name": "Hotkeys for specific files: Open Home in new tab",
+      "name": "QuickAdd: open home",
       "mode": "any"
     },
     {

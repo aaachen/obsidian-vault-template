@@ -154,10 +154,7 @@
   ],
   "showUnsupportedFiles": false,
   "userIgnoreFilters": [
-    "Spaces/Life/Cards/Finance Calendar/",
-    "Cards/X/Courses/",
-    "Atlas/Views/Daily Sparks",
-    "Compass/Journal/"
+    "X/"
   ],
   "showInlineTitle": true,
   "vimMode": false,

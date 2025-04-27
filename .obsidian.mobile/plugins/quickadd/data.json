@@ -137,7 +137,7 @@
           "collapsed": true
         }
       ],
-      "collapsed": false
+      "collapsed": true
     },
     {
       "id": "513101f6-499f-436c-a053-978a6720d0ee",
@@ -362,6 +362,41 @@
         }
       ],
       "collapsed": true
+    },
+    {
+      "id": "444aaf53-ee3c-4251-830f-57990ab9b8db",
+      "name": "open home",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "Home.md",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": false,
+        "createWithTemplate": false,
+        "template": ""
+      },
+      "format": {
+        "enabled": true,
+        "format": ""
+      },
+      "insertAfter": {
+        "enabled": false,
+        "after": "",
+        "insertAtEnd": false,
+        "considerSubsections": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": false,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default"
     }
   ],
   "macros": [

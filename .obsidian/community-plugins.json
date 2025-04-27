@@ -24,7 +24,6 @@
   "simple-embeds",
   "dataview",
   "obsidian-excalidraw-plugin",
-  "obsidian-hotkeys-for-specific-files",
   "obsidian-kanban",
   "excalibrain",
   "imdb-sync",
@@ -39,5 +38,6 @@
   "calendar",
   "quickadd",
   "obsidian-meta-bind-plugin",
-  "obsidian-vimrc-support"
+  "obsidian-vimrc-support",
+  "darlal-switcher-plus"
 ]

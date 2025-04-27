@@ -17,11 +17,11 @@ table without id
 	file.link as Title, 
 	join(flat(sort(list(yearXPL))), ", ") as Read,
 	join(author, ", ") as Author,
-	rating, 
+	rating as Rating, 
 	join(genre, ", ") as Genre,
-	date(published).year as Published
+	date(published).year as Published,
+	choice( contains(tags, "book/unfinished"), "Dropped", choice( contains(tags, "book/reading"), "Reading", choice( contains(tags, "book"), "Read", "Unknown" ) ) ) as Status
 FROM "Atlas/Literature"
 SORT flat(sort(list(yearXPL)))[0] DESC
 WHERE icontains(up, this.file.link)
 ```
-
